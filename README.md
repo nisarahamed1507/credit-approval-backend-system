@@ -437,18 +437,10 @@ docker-compose logs db
 docker-compose logs celery
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
 ## 👤 Author
 
 **Shaik Mohammad Nisar Ahamed**  
 Backend Developer | Django Specialist  
-GitHub: [@nisarahamed1507](https://github.com/nisarahamed1507)
-E-mail : nisarahamed1507@gmail.com
+GitHub: [@nisarahamed1507](https://github.com/nisarahamed1507)  
+Email: nisarahamed1507@gmail.com
 
