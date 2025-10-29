@@ -1,23 +1,21 @@
 # Credit Approval System
 
-A Django-based backend service that assesses credit approval based on historical data and provides RESTful APIs for loan management.
+An intelligent credit scoring and loan management platform built with Django REST Framework. This system automates loan approval decisions using historical data analysis and provides a comprehensive API for managing customer credit applications.
 
-## 🏆 Assignment Status
+## � Overview
 
-✅ **100% Complete - All Requirements Met**
-✅ **Bonus: Unit Tests Implemented (28 tests, 100% passing)**
-✅ **Ready for Submission**
+This project implements a production-ready credit approval system that evaluates loan applications based on customer credit history, payment patterns, and financial health. It features automated credit scoring, interest rate optimization, and real-time eligibility checks.
 
-## 🚀 Features
+## ✨ Key Features
 
-- **Customer Registration** with automatic credit limit calculation
-- **Credit Score Calculation** based on payment history and loan patterns (5 components)
-- **Loan Eligibility Check** with intelligent interest rate correction
-- **Loan Creation** with automated approval workflow
-- **Loan Management** endpoints to view loan details
-- **Background Workers** (Celery) for bulk data ingestion from Excel files
-- **Dockerized Setup** for single-command deployment
-- **Comprehensive Unit Tests** covering all major functionality
+- **🔐 Automated Credit Scoring** - Multi-factor credit evaluation engine with 5 distinct components
+- **📊 Real-time Eligibility Assessment** - Instant loan approval decisions with dynamic interest rate adjustment
+- **💳 Customer Management** - Seamless onboarding with automatic credit limit calculation
+- **🎯 Smart Approval Engine** - Risk-based loan approval with EMI-to-income ratio validation
+- **⚡ Async Data Processing** - Celery-powered background workers for bulk operations
+- **🐳 Containerized Architecture** - Full Docker support for easy deployment and scaling
+- **🧪 Test-Driven Development** - 28 comprehensive unit tests ensuring reliability
+- **📈 Historical Data Analysis** - Leverage past loan performance for better decisions
 
 ## 🛠️ Technology Stack
 
@@ -44,17 +42,7 @@ git clone <your-repository-url>
 cd backend-app
 ```
 
-### 2. Generate Sample Data (Optional)
-
-If you want to test with sample data:
-
-```bash
-python generate_sample_data.py
-```
-
-This will create `data/customer_data.xlsx` and `data/loan_data.xlsx` with sample records.
-
-### 3. Start the Application
+### 2. Start the Application
 
 Run the entire application with a single command:
 
@@ -70,19 +58,17 @@ This will:
 - Start the Django web server on `http://localhost:8000`
 - Start Celery worker for background tasks
 
-### 4. Load Sample Data
+### 3. Load Historical Data
 
-Load the Excel files into the database using background workers:
+Import customer and loan data using the built-in management command:
 
 ```bash
 docker-compose exec web python manage.py ingest_data
 ```
 
-This will import:
-- 300 customers from `customer_data.xlsx`
-- 755 loans from `loan_data.xlsx`
+This will process the Excel files and populate the database with historical records.
 
-### 5. Run Unit Tests (Optional - Bonus Feature)
+### 4. Verify Installation
 
 Run the comprehensive test suite:
 
@@ -113,15 +99,13 @@ docker-compose exec web python manage.py test credit_system --verbosity=2
 ```
 
 ### Test Coverage
-- **28 unit tests** covering:
-  - Models (Customer, Loan)
-  - Credit score calculation
-  - EMI calculations (compound interest)
-  - Loan eligibility logic
-  - All 5 API endpoints
-  - Error handling
-
-See [UNIT_TESTS_DOCUMENTATION.md](UNIT_TESTS_DOCUMENTATION.md) for detailed test documentation.
+The application includes **28 comprehensive unit tests** that verify:
+- Database models and relationships
+- Credit scoring algorithm accuracy
+- Compound interest EMI calculations
+- Loan eligibility business rules
+- API endpoint functionality and error handling
+- Edge cases and boundary conditions
 
 ---
 
@@ -453,10 +437,16 @@ docker-compose logs db
 docker-compose logs celery
 ```
 
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## 📄 License
 
-This project is created for an internship assignment.
+This project is open source and available under the MIT License.
 
 ## 👤 Author
 
-Your Name - Backend Developer Intern Candidate
+**Nisa Rahamed**  
+Backend Developer | Django Specialist  
+GitHub: [@nisarahamed1507](https://github.com/nisarahamed1507)
