@@ -447,6 +447,8 @@ This project is open source and available under the MIT License.
 
 ## 👤 Author
 
-**Nisa Rahamed**  
+**Shaik Mohammad Nisar Ahamed**  
 Backend Developer | Django Specialist  
 GitHub: [@nisarahamed1507](https://github.com/nisarahamed1507)
+E-mail : nisarahamed1507@gmail.com
+
